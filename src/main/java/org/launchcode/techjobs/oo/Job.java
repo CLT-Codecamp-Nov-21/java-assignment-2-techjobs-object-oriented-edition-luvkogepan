@@ -69,7 +69,7 @@ public class Job {
             if (!this.getCoreCompetency().getValue().equals("")) {
                 result += "\nCore Competency: " + this.getCoreCompetency()+"\n";
             } else {
-                result += "\nCore Competency: " + error;
+                result += "\nCore Competency: " + error+"\n";
             }
         }
         return result;
