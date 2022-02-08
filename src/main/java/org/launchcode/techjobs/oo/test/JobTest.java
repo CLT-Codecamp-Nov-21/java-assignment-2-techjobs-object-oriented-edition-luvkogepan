@@ -46,13 +46,13 @@ public class JobTest {
     @Test
     public void testToStringMethodWithAllValues() {
         Job j1 = new Job("Cook", new Employer("Wendy's"), new Location("Atlanta"), new PositionType("culinary"), new CoreCompetency("cooking"));
-        assertEquals("ID: _5_\nName: _Cook_\nEmployer: _Wendy's_\nLocation: _Atlanta_\nPosition Type: _culinary_\nCore Competency: _cooking_", j1.toString());
+        assertEquals("\nID: 5\nName: Cook\nEmployer: Wendy's\nLocation: Atlanta\nPosition Type: culinary\nCore Competency: cooking\n", j1.toString());
     }
 
     @Test
     public void testToStringMethodWithMissingValues() {
         Job j1 = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
-        assertEquals("ID: _1_\nName: Data not available\nEmployer: Data not available\nLocation: Data not available\nPosition Type: Data not available\nCore Competency: Data not available", j1.toString());
+        assertEquals("\nID: 1\nName: Data not available\nEmployer: Data not available\nLocation: Data not available\nPosition Type: Data not available\nCore Competency: Data not available", j1.toString());
     }
 
     @Test

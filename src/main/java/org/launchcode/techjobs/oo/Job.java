@@ -44,30 +44,30 @@ public class Job {
             result = "OOPS! This job does not seem to exist.";
         } else {
             if (this.getId() != (0)) {
-                result = "ID: _" + this.getId() + "_";
+                result = "\nID: " + this.getId();
             }
             if (!this.getName().equals("")) {
-                result += "\nName: _" + this.getName() + "_";
+                result += "\nName: " + this.getName();
             } else {
                 result += "\nName: " + error;
             }
             if (!this.getEmployer().getValue().equals("")) {
-                result += "\nEmployer: _" + this.getEmployer() + "_";
+                result += "\nEmployer: " + this.getEmployer();
             } else {
                 result += "\nEmployer: " + error;
             }
             if (!this.getLocation().getValue().equals("")) {
-                result += "\nLocation: _" + this.getLocation() + "_";
+                result += "\nLocation: " + this.getLocation();
             } else {
                 result += "\nLocation: " + error;
             }
             if (!this.getPositionType().getValue().equals("")) {
-                result += "\nPosition Type: _" + this.getPositionType() + "_";
+                result += "\nPosition Type: " + this.getPositionType();
             } else {
                 result += "\nPosition Type: " + error;
             }
             if (!this.getCoreCompetency().getValue().equals("")) {
-                result += "\nCore Competency: _" + this.getCoreCompetency() + "_";
+                result += "\nCore Competency: " + this.getCoreCompetency()+"\n";
             } else {
                 result += "\nCore Competency: " + error;
             }
