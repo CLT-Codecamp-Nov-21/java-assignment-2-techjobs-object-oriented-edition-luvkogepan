@@ -17,6 +17,8 @@ public class Main {
 //        for (Job job : jobs){
 //            System.out.println(job);
 //        }
+        Job j = new Job();
+        System.out.println(j.toString());
     }
 
 }

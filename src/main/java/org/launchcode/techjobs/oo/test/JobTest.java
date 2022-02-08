@@ -42,4 +42,22 @@ public class JobTest {
         Job j2 = new Job("Cook", new Employer("Wendy's"), new Location("Atlanta"), new PositionType("culinary"), new CoreCompetency("cooking"));
         assertFalse(j1.equals(j2));
     }
+
+    @Test
+    public void testToStringMethodWithAllValues() {
+        Job j1 = new Job("Cook", new Employer("Wendy's"), new Location("Atlanta"), new PositionType("culinary"), new CoreCompetency("cooking"));
+        assertEquals("ID: _1_\nName: _Cook_\nEmployer: _Wendy's_\nLocation: _Atlanta_\nPosition Type: _culinary_\nCore Competency: _cooking_", j1.toString());
+    }
+
+    @Test
+    public void testToStringMethodWithMissingValues() {
+        Job j1 = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+        assertEquals("ID: _1_\nName: Data not available\nEmployer: Data not available\nLocation: Data not available\nPosition Type: Data not available\nCore Competency: Data not available", j1.toString());
+    }
+
+    @Test
+    public void testToStringMethodJobWithOnlyId() {
+        Job j = new Job();
+        assertEquals("OOPS! This job does not seem to exist.", j.toString());
+    }
 }

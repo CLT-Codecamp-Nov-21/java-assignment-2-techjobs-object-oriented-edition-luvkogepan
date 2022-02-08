@@ -37,14 +37,48 @@ public class Job {
 
     @Override
     public String toString() {
-        return "Job{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", employer=" + employer +
-                ", location=" + location +
-                ", positionType=" + positionType +
-                ", coreCompetency=" + coreCompetency +
-                '}';
+        String result = null;
+        String error = "Data not available";
+       // && this.getEmployer().getValue().equals(null) && this.getLocation().getValue().equals(null) && this.getPositionType().getValue().equals(null) && this.getCoreCompetency().getValue().equals(null)
+        if (this.getName()==null) {
+            result = "OOPS! This job does not seem to exist.";
+        } else {
+            if (this.getId() != (0)) {
+                result = "ID: _" + this.getId() + "_";
+            }
+            if (!this.getName().equals("")) {
+                result += "\nName: _" + this.getName() + "_";
+            } else {
+                result += "\nName: " + error;
+            }
+            if (!this.getEmployer().getValue().equals("")) {
+                result += "\nEmployer: _" + this.getEmployer() + "_";
+            } else {
+                result += "\nEmployer: " + error;
+            }
+            if (!this.getLocation().getValue().equals("")) {
+                result += "\nLocation: _" + this.getLocation() + "_";
+            } else {
+                result += "\nLocation: " + error;
+            }
+            if (!this.getPositionType().getValue().equals("")) {
+                result += "\nPosition Type: _" + this.getPositionType() + "_";
+            } else {
+                result += "\nPosition Type: " + error;
+            }
+            if (!this.getCoreCompetency().getValue().equals("")) {
+                result += "\nCore Competency: _" + this.getCoreCompetency() + "_";
+            } else {
+                result += "\nCore Competency: " + error;
+            }
+        }
+        return result;
+//        return "ID: _" +this.getId()+"_"+
+//        "\nName: _" +this.getName()+"_"+
+//        "\nEmployer: _" +this.getEmployer()+"_"+
+//        "\nLocation: _" +this.getLocation()+"_"+
+//        "\nPosition Type: _" +this.getPositionType()+"_"+
+//        "\nCore Competency: _" +this.getCoreCompetency()+"_";
     }
 
     @Override
