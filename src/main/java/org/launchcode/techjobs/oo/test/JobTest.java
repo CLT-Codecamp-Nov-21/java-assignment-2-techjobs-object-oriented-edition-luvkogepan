@@ -27,7 +27,7 @@ public class JobTest {
     @Test
     public void testJobConstructorSetsAllFields() {
         Job j3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertEquals(1, j3.getId());
+        assertEquals(6, j3.getId());
         assertEquals("Product tester", j3.getName());
         assertTrue(j3.getName() instanceof String);
         assertTrue(j3.getEmployer() instanceof Employer);
@@ -46,7 +46,7 @@ public class JobTest {
     @Test
     public void testToStringMethodWithAllValues() {
         Job j1 = new Job("Cook", new Employer("Wendy's"), new Location("Atlanta"), new PositionType("culinary"), new CoreCompetency("cooking"));
-        assertEquals("ID: _1_\nName: _Cook_\nEmployer: _Wendy's_\nLocation: _Atlanta_\nPosition Type: _culinary_\nCore Competency: _cooking_", j1.toString());
+        assertEquals("ID: _5_\nName: _Cook_\nEmployer: _Wendy's_\nLocation: _Atlanta_\nPosition Type: _culinary_\nCore Competency: _cooking_", j1.toString());
     }
 
     @Test
